@@ -1,0 +1,35 @@
+/* COPIADO DE CHATGPT EL CSS */
+
+/* Estilo general de la página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: #fff;
+}
+
+/* Contenedor del reloj */
+.clock {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Hora */
+#time {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+/* Fecha */
+#date {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}

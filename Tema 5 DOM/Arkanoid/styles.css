@@ -1,0 +1,50 @@
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    gap: 4px;
+}
+
+
+#caja {
+    width: 550px;
+    height: 510px;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#estadisticas {
+    width: 250px;
+    text-align: center;
+}
+
+#bola{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#barra{
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background-color: blue;
+    margin-top: 440px;
+}
+
+#titulo{
+    text-align: center;
+}
+
+#contenido{
+    color: white;
+}

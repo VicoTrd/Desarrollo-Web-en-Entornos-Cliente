@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(81, 128, 12);
+    color: white;
+    text-align: center;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(81, 128, 12);;
+    border-color: white;
+    width: 2.1%;
+    height: 40px;
+}
+
+#palabra{
+    letter-spacing: 10px;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* separación entre los contenedores */
+  margin-top: 50px;
+}
+
+#menu > div {
+  background-color: rgb(81, 128, 12);
+  padding: 20px 40px;
+  border-radius: 15px;
+  border: 2px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#menu > div:hover {
+  background-color: #dfe6e9;
+  transform: scale(1.05);
+  border-color: #888;
+  color: black;
+}

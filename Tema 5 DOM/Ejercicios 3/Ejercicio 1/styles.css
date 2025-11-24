@@ -1,0 +1,22 @@
+body{
+    background-color: orange;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+div{
+    text-align: center;
+    color: white;
+}
+p{
+    text-align: center;
+    size: 100px;
+}
+button{
+    height: 100px;
+    width: 200px;
+    background-color: orange;
+    border-color: white;
+    color: white;
+}

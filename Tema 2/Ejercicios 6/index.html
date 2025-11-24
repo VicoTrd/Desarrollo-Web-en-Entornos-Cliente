@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="programa.js"></script>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f4f4f4;
+        }
+        h1 {
+        color: #333;
+        }
+        .card {
+        background: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+        padding: 10px 15px;
+        border: none;
+        background: #0066ff;
+        color: white;
+        font-size: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        button:hover {
+        background: #004cd1;
+        }
+    </style>
+</head>
+
+</head>
+<body>
+    <h1>Explorador del BOM</h1>
+
+
+    <div class="card">
+    <h2>Información del Navegador</h2>
+    <p><strong>Nombre:</strong> <span id="navegador"></span></p>
+    <p><strong>Idioma:</strong> <span id="idioma"></span></p>
+    <p><strong>Plataforma:</strong> <span id="plataforma"></span></p>
+    <p><strong>Resolución de pantalla:</strong> <span id="resolucion"></span></p>
+    </div>
+
+
+    <div class="card">
+    <h2>URL Actual</h2>
+    <p id="url"></p>
+    </div>
+
+
+    <div class="card">
+    <h2>Redirección</h2>
+    <button id="btnRedirigir">Ir a MDN</button>
+    </div>
+
+
+    <div class="card">
+    <h2>Información del Objeto Screen</h2>
+    <p><strong>Resolución total:</strong> <span id="screenTotal"></span></p>
+    <p><strong>Área disponible:</strong> <span id="screenDisponible"></span></p>
+    <p><strong>Orientación:</strong> <span id="screenOrientacion"></span></p>
+    <p><strong>Profundidad de color:</strong> <span id="screenColor"></span></p>
+    </div>
+</body>
+</html>
