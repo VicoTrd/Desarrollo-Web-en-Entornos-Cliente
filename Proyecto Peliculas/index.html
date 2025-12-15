@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="cajas" style="display:flex; gap:5px; margin: 20px;">
+        <input type="text" id="busca" placeholder="Buscar películas...">
+        <input type="text" id="anio" placeholder="Filtrar por año">
+        <button id="botonbuscar">Buscar</button>
+    </div>
+
+    <div id="filtroSeriesPeliculas">
+        <button id="series" data-tipo="series">Series</button>
+        <button id="peliculas" data-tipo="movie">Películas</button>
+    </div>
+
+    <button id="verFavs" style="margin-top:20px;">Favoritos</button>
+
+    <div id="favoritos" style="display:none; flex-wrap:wrap; margin-top:40px;"></div>
+
+    <div id="div" style="display:flex; flex-wrap:wrap; margin-top: 60px;"></div>
+
+    <script src="programa.js"></script>
+</body>
+</html>
+

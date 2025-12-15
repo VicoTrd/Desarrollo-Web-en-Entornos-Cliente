@@ -1,0 +1,225 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general con imagen y overlay */
+body {
+    background: url("https://img.freepik.com/foto-gratis/fondo-horizontal-abstracto-laser-optico_23-2149116254.jpg?semt=ais_hybrid&w=740&q=80") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay oscuro para legibilidad */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* oscurece la imagen al 60% */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Input estilo moderno */
+input[type="text"] {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 2px solid #00ff66; /* borde verde neón */
+    background-color: rgba(27, 27, 27, 0.8);
+    color: #fff;
+    width: 250px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ff66;
+    border-color: #00ff66;
+}
+
+/* Botones neón */
+button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid #00ff66;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #00ff66;
+    color: #121212;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff66, 0 0 30px #00ff66;
+}
+
+/* Contenedor de películas */
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+/* Tarjetas estilo futurista */
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ff66;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ff66, 0 0 40px #00ff66 inset;
+}
+
+/* Imagen de la película */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #00ff66;
+}
+
+/* Información de la película */
+.card .info {
+    padding: 15px;
+}
+
+.card .info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00ff66;
+    text-shadow: 0 0 5px #00ff66;
+}
+
+.card .info p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Animación de carga */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    input[type="text"] {
+        width: 180px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
+    #contenedor {
+        gap: 15px;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+}
+#btnCargar {
+    position: fixed;       /* fijo en pantalla */
+    bottom: 20px;          /* 20px del borde inferior */
+    left: 20px;            /* 20px del borde izquierdo */
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: 2px solid #00ff66; /* borde verde neón */
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;         /* que quede sobre todo el contenido */
+}
+
+#btnCargar:hover {
+    background-color: #00ff66;
+    color: #121212;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff66, 0 0 30px #00ff66;
+}
+
+#cajas{
+    flex-direction: row;
+}
+
+#filtroSeriesPeliculas {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#filtroSeriesPeliculas button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#filtroSeriesPeliculas button.active {
+    background-color: #555;
+    color: white;
+}
+#verFavs {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid #00ff66;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#verFavs:hover {
+  background-color: #00ff66;
+  color: #121212;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff66, 0 0 30px #00ff66;
+}
